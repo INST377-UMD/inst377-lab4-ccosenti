@@ -1,0 +1,66 @@
+<html>
+   <head>
+       <link rel="stylesheet" href="l4.css">
+       <script>
+           function newAlert() {
+               const name = document.getElementById("name").value;
+               alert("Hi!  " + name + "!");
+           }
+
+           function newColor() {
+               if (document.body.style.backgroundColor === 'pink') {
+                   document.body.style.backgroundColor = 'plum';
+               } else {
+                   document.body.style.backgroundColor = 'pink';
+               }
+           }
+
+           function validText() {
+               const text = document.getElementById("test").value;
+               var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+               if (validation.test(text)) {
+                   alert("Um why is there a special character???");
+               } else {
+                   alert("Yayy!!!! No special characters found");
+               }
+           }
+
+           function addText() {
+               const add = document.querySelector('h1');
+               add.textContent += " Add Text";
+           }
+       </script>
+   </head>
+
+   <body>
+       <div>
+           <h1>INST377 - Lab 4</h1>
+       </div>  
+
+       <div class="container">
+        <div class="style">
+           <form onsubmit="event.preventDefault(); newAlert();" class="align">
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="name" required>
+               <input type="submit" value="Alert Me!">
+           </form>
+        </div>
+        <div class="style">
+           <button onclick="newColor()">Change Color</button>
+        </div>
+       </div>
+
+       <div class="container">
+        <div class="style">
+           <form onsubmit="event.preventDefault(); validText();" class="align">
+               <label for="test">Text Tester</label>
+               <input type="text" id="test" name="test" required>
+               <input type="submit" value="Validate Text">
+           </form>
+        </div>
+        <div class="style">
+           <button onclick="addText()">Add Text</button>
+        </div>
+       </div>
+   </body>
+</html>
