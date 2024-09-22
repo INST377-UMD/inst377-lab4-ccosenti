@@ -1,0 +1,33 @@
+body{
+    background-color: pink;
+    margin: 25px;
+    
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.align {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+input[type="text"] {
+    margin-left: 10px; 
+}
+
+button {
+    margin-left: 10px;
+}
+
+.style {
+    background-color: hotpink;
+    border-radius: 5px; /* Less rounded corners */
+    padding: 10px;
+    border: 2px solid black; /* Visible border */
+    margin: 5px; /* Space to prevent collision */
+}
